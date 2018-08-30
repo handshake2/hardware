@@ -3,7 +3,7 @@ const fs = require('fs');
 const mi = require('./mito.js');
 const si = require('systeminformation');
 const express = require('express');
-
+var port = process.env.PORT || 3000;
 let cpu = os.cpus();
 let sistema= os.platform();
 let usuario = os.hostname();
@@ -48,5 +48,5 @@ app.get("/",function(req,res){
 }
 );
 
-app.listen(8080);
+app.listen(port);
 
